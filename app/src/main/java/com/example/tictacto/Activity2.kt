@@ -1,21 +1,45 @@
 package com.example.tictacto
 
 import android.os.Bundle
-import android.widget.Button
-import androidx.activity.enableEdgeToEdge
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class Activity2 : AppCompatActivity() {
+    var boardGame:ArrayList<ImageButton> = ArrayList();
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_2)
-        val player1: Button = findViewById(R.id.Activity2_gameBtn);
+
+        getBoard();
 
 
+    }
+
+    private fun getBoard(){
+        //לשנות את זה שזה יעבוד לפי tag ולא לפי id
         for (i in 0 until 9) {
-            //add button to array
+            var imageButtonID: Int =
+                resources.getIdentifier("Activity2_box$i", "id", packageName);//find id dynamic
+            if (imageButtonID != 0) {
+                boardGame.add(findViewById(imageButtonID));
+            }
         }
+
+        boardGame.forEachIndexed{ index,imageButton->
+            imageButton.setOnClickListener{
+                click(index,imageButton)
+        }
+        }
+    }
+
+    //צריך לטפל בלחיצה כפולה שמשנה את הרקע
+    var first:Boolean = true
+    private fun click(i:Int ,imageButton: ImageButton){
+        if (first)
+             imageButton.setImageResource(R.drawable.x);
+        else
+             imageButton.setImageResource(R.drawable.circle);
+
+        first = !first
     }
 }
