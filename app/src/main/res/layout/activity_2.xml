@@ -20,7 +20,7 @@
         app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Activity2_TextWin">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -132,28 +132,38 @@
 
     <Button
         android:id="@+id/Activity2_reset"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="361dp"
+        android:layout_height="59dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="24dp"
-        android:text="New game"
+        android:fontFamily="sans-serif"
+        android:text="@string/play_again"
         android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/Activity2_textOfFlow" />
 
     <TextView
-        android:id="@+id/Activity2_TextWin"
-        android:layout_width="353dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="32dp"
+        android:id="@+id/Activity2_textOfFlow"
+        android:layout_width="362dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="#8A8888"
+        android:fontFamily="sans-serif"
+        android:text="@string/play"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

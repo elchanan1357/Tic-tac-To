@@ -9,4 +9,6 @@
     <string name="name_of_player_two">Name of player two</string>
     <string name="enter_your_name">Enter your name...</string>
     <string name="next_turn">Next turn</string>
+    <string name="play_again">Play again</string>
+    <string name="play">play</string>
 </resources>
