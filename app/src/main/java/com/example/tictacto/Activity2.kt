@@ -46,17 +46,15 @@ class Activity2 : AppCompatActivity() {
 
         if (btn.drawable != null) return
 
-        if (this.turn)
-            btn.setImageResource(R.drawable.x)
-        else
-            btn.setImageResource(R.drawable.circle)
+        if (this.turn) btn.setImageResource(R.drawable.x)
+        else btn.setImageResource(R.drawable.circle)
 
         this.turn = !this.turn
         this.counter++
         textGame?.text = "$name play"
 
         name = if (!turn) name1 else name2
-        if (win()) endOfGame(name)
+        if (win()) return endOfGame(name)
         if (counter == 9) endOfGame()
     }
 
@@ -88,11 +86,9 @@ class Activity2 : AppCompatActivity() {
         textGame?.setBackgroundColor(Color.parseColor("#E91E63"))
         textGame?.setTextColor(Color.parseColor("#BCF481"))
 
-        if (win == null) {
+        if (win == null)
             textGame?.text = "$name1 and $name2 is the draw"
-            return
-        }
-        if (win == name1)
+        else if (win == name1)
             textGame?.text = "$name1 is the winner"
         else
             textGame?.text = "$name2 is the winner"

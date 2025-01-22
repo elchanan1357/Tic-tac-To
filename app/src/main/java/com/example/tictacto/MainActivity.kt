@@ -15,8 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setTitle("          Welcome To The Tic Tac To")
-
         val startGame: Button = findViewById(R.id.MainActivity_StartBtn)
         startGame.setOnClickListener(::login)
     }
@@ -38,6 +36,5 @@ class MainActivity : AppCompatActivity() {
                 err.visibility = View.GONE
             },2000)
         }
-
     }
 }
