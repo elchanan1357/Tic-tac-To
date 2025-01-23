@@ -11,7 +11,7 @@
 
     <Button
         android:id="@+id/MainActivity_StartBtn"
-        android:layout_width="365dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="50dp"
@@ -24,7 +24,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="367dp"
+        android:layout_width="0dp"
         android:layout_height="322dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="150dp"
